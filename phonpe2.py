@@ -1,12 +1,12 @@
 import pandas as pd
 import streamlit as st
 
-df = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\AggTrans.csv", index_col=0)
-state = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\Longitude_Latitude_State_Table.csv")
-districts = pd.read_csv("C:\\Users\\silam\\OneDrive\Desktop\\Guvi notes\\phonepe\\Data_Map_Districts_Longitude_Latitude.csv")
-districts_tran = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\MapTrans.csv", index_col=0)
-app_opening = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\DistRegistering.csv", index_col=0)
-user_device = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\UserByDevice.csv", index_col=0)
+df = pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe.csv/AggTrans.csv")
+state = pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe.csv/Longitude_Latitude_State_Table.csv")
+districts = pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe.csv/Data_Map_Districts_Longitude_Latitude.csv")
+districts_tran = pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe.csv/MapTrans.csv")
+app_opening = pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe.csv/DistRegistering.csv")
+user_device = pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe.csv/UserByDevice.csv")
 
 #Data preparation for geo-visualization
 state=state.sort_values(by=['state'])
