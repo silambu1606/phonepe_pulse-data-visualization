@@ -208,7 +208,7 @@ if SELECT =="Search":
         cursor.execute(f"SELECT DISTINCT State,Quater,year,Brand,Brand_percentage,Brand_count FROM agg_user WHERE  state = '{state}' AND year = '{year}' AND Brand = '{Brand}' ORDER BY state,Quater,year,Brand DESC");
         df = pd.DataFrame(cursor.fetchall(), columns=['state','Quater', 'year', 'Brand', 'Brand_percentage','Brand_count'])
         return df
-    choropleth_data=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\choropleth_data.csv",index_col=0)
+    choropleth_data=pd.read_csv("phonepe/choropleth_data.csv")
     #plot_state_total=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\plot_state_total.csv",index_col=0)
     districts_final=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\districts_final.csv",index_col=0)
     state_final=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\state_final.csv",index_col=0)
