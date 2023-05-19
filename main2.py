@@ -212,7 +212,7 @@ if SELECT =="Search":
     #plot_state_total=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\plot_state_total.csv",index_col=0)
     districts_final=pd.read_csv("phonepe/districts_final.csv",index_col=0)
     state_final=pd.read_csv("phonepe/state_final.csv",index_col=0)
-    app_opening = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\DistRegistering.csv", index_col=0)
+    app_opening = pd.read_csv("phonepe/DistRegistering.csv", index_col=0)
     #Aggregated Transaction amount and type of transaction:
     if choice_topic == "Over All Transactions":
         select = st.selectbox('SELECT VIEW', ['Tabular view', 'Plotly View'], 0)
