@@ -69,7 +69,7 @@ if SELECT == "Basic insights":
                 st.plotly_chart(fig, theme=None, use_container_width=True)
     
     elif select=="Least 10 states based on type and amount of transaction":
-        df2=pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe/Top_transaction-10.csv")
+        df2=pd.read_csv("phonepe/Top_transaction-10.csv")
         columns=list(df2.columns)
         col1,col2 = st.columns(2)
         with col1:
