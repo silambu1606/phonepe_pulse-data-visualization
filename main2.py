@@ -81,8 +81,9 @@ if SELECT == "Basic insights":
             with tab2:st.plotly_chart(fig, theme=None, use_container_width=True)
 
     elif select=="Top 10 mobile brands based on percentage of transaction":
-        cursor.execute("SELECT DISTINCT Brand,Brand_percentage FROM agg_user GROUP BY state,year,Quater,Brand,Brand_count,Brand_percentage  ORDER BY Brand_percentage DESC LIMIT 10");
-        df = pd.DataFrame(cursor.fetchall(),columns=['Brand','Brand_percentage'])
+        #cursor.execute("SELECT DISTINCT Brand,Brand_percentage FROM agg_user GROUP BY state,year,Quater,Brand,Brand_count,Brand_percentage  ORDER BY Brand_percentage DESC LIMIT 10");
+        #df = pd.DataFrame(cursor.fetchall(),columns=['Brand','Brand_percentage'])
+        df=pd.read_csv("phonepe.csv/df.csv")
         col1,col2 = st.columns(2)
         with col1:
             st.write(df)
@@ -96,8 +97,9 @@ if SELECT == "Basic insights":
                 st.plotly_chart(fig, theme=None, use_container_width=True)
     
     elif select=="Top 10 Registered-users based on States and District(pincode)":
-        cursor.execute("SELECT DISTINCT State,District,Registered_user FROM top_user GROUP BY State,District,Year,Quater,Registered_user  ORDER BY Registered_user DESC LIMIT 10");
-        df = pd.DataFrame(cursor.fetchall(),columns=['State','District','Registered-user'])
+        #cursor.execute("SELECT DISTINCT State,District,Registered_user FROM top_user GROUP BY State,District,Year,Quater,Registered_user  ORDER BY Registered_user DESC LIMIT 10");
+        #df = pd.DataFrame(cursor.fetchall(),columns=['State','District','Registered-user'])
+        df = pd.read_csv("phonepe.csv/Registered-user.csv")
         col1,col2 = st.columns(2)
         with col1:
             st.write(df)
@@ -111,8 +113,9 @@ if SELECT == "Basic insights":
                 st.plotly_chart(fig, theme=None, use_container_width=True)
 
     elif select=="Top 10 Districts based on states and amount of transaction":
-        cursor.execute("SELECT DISTINCT state,District,Transaction_amount FROM map_trans GROUP BY state,year,Quater,District,Transaction_count,Transaction_amount ORDER BY Transaction_amount DESC LIMIT 10");
-        df = pd.DataFrame(cursor.fetchall(),columns=['state','District','Transaction_amount'])
+        #cursor.execute("SELECT DISTINCT state,District,Transaction_amount FROM map_trans GROUP BY state,year,Quater,District,Transaction_count,Transaction_amount ORDER BY Transaction_amount DESC LIMIT 10");
+        #df = pd.DataFrame(cursor.fetchall(),columns=['state','District','Transaction_amount'])
+        df=pd.read_csv("phonepe.csv/Transaction_amount10.csv")
         col1,col2 = st.columns(2)
         with col1:
             st.write(df)
@@ -125,8 +128,9 @@ if SELECT == "Basic insights":
             with tab2:
                 st.plotly_chart(fig, theme=None, use_container_width=True)
     elif select=="Least 10 Districts based on states and amount of transaction":
-        cursor.execute("SELECT DISTINCT state,District,Transaction_amount FROM map_trans GROUP BY state,year,Quater,District,Transaction_count,Transaction_amount ORDER BY Transaction_amount ASC LIMIT 10");
-        df = pd.DataFrame(cursor.fetchall(),columns=['state','District','Transaction_amount'])
+        #cursor.execute("SELECT DISTINCT state,District,Transaction_amount FROM map_trans GROUP BY state,year,Quater,District,Transaction_count,Transaction_amount ORDER BY Transaction_amount ASC LIMIT 10");
+        #df = pd.DataFrame(cursor.fetchall(),columns=['state','District','Transaction_amount'])
+        df = pd.read_csv("phonepe.csv/Transaction_amount-10.csv")
         col1,col2 = st.columns(2)
         with col1:
             st.write(df)
@@ -140,8 +144,9 @@ if SELECT == "Basic insights":
                 st.plotly_chart(fig, theme=None, use_container_width=True)
 
     elif select=="Least 10 registered-users based on Districts and states":
-        cursor.execute("SELECT DISTINCT State,District,Registered_user FROM top_user GROUP BY State,District,Year,Quater,Registered_user  ORDER BY Registered_user ASC LIMIT 10");
-        df = pd.DataFrame(cursor.fetchall(),columns=['State','District','Registered_user'])
+        #cursor.execute("SELECT DISTINCT State,District,Registered_user FROM top_user GROUP BY State,District,Year,Quater,Registered_user  ORDER BY Registered_user ASC LIMIT 10");
+        #df = pd.DataFrame(cursor.fetchall(),columns=['State','District','Registered_user'])
+        df = pd.read_csv("phonepe.csv/Registered_user10.csv")
         col1,col2 = st.columns(2)
         with col1:
             st.write(df)
@@ -156,8 +161,9 @@ if SELECT == "Basic insights":
 
 
     elif select=="Top 10 transactions_type based on states and transaction_amount":
-        cursor.execute("SELECT DISTINCT state,Transaction_type,Transaction_amount FROM agg_trans GROUP BY  state,Transaction_amount,year,Quater,Transaction_type  ORDER BY Transaction_amount DESC LIMIT 10")
-        df = pd.DataFrame(cursor.fetchall(),columns=['state','Transaction_type','Transaction_amount'])
+        #cursor.execute("SELECT DISTINCT state,Transaction_type,Transaction_amount FROM agg_trans GROUP BY  state,Transaction_amount,year,Quater,Transaction_type  ORDER BY Transaction_amount DESC LIMIT 10")
+        #df = pd.DataFrame(cursor.fetchall(),columns=['state','Transaction_type','Transaction_amount'])
+        df = pd.read_csv("phonepe.csv/state_Transaction_amount10.csv")
         
         col1,col2 = st.columns(2)
         with col1:
