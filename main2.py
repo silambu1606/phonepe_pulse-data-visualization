@@ -54,7 +54,7 @@ if SELECT == "Basic insights":
                "Least 10 registered-users based on Districts and states","Top 10 transactions_type based on states and transaction_amount"]
     select = st.selectbox("Select the option",options)
     if select=="Top 10 states based on year and amount of transaction":
-        Top_df1=pd.read_csv("https://raw.githubusercontent.com/silambu1606/phonepe_pulse-data-visualization/main/phonepe/Top_transaction10.csv")
+        Top_df1=pd.read_csv("phonepe/Top_transaction10.csv")
         columns=list(Top_df1.columns)
         col1,col2 = st.columns(2)
         with col1:
