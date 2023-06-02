@@ -19,6 +19,7 @@ cursor=conn.cursor()
 
 
 
+@st.cache(persist = True)
 # Creating Options in app
 #with st.sidebar:
 SELECT = option_menu(
@@ -36,6 +37,7 @@ SELECT = option_menu(
 
     )
 #Top and least ten transaction and user:
+@st.cache(persist = True)
 if SELECT == "Basic insights":
     st.title("BASIC INSIGHTS")
     #st.write("----")
@@ -175,9 +177,7 @@ if SELECT == "Basic insights":
 
 
 
-
-
-
+@st.cache(persist = True)
 if SELECT =="Search":
     Topic = ["--Select--","Over All Transactions","Overall India User Device Analysis","Geo Visualization And District Wise Registered User"]
     choice_topic = st.selectbox("Search by",Topic)
