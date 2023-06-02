@@ -2,11 +2,11 @@ import pandas as pd
 import streamlit as st
 
 import pandas as pd 
-#import mysql.connector
+import mysql.connector
 
-#conn=mysql.connector.connect(user='root', password='Silambu@1606', host='localhost',port=3306,database='phonepe_pulse',
+conn=mysql.connector.connect(user='root', password='Silambu@1606', host='localhost',port=3306,database='phonepe_pulse',
                              #auth_plugin='mysql_native_password')
-#cursor=conn.cursor()
+cursor=conn.cursor()
 #df = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\AggTrans.csv", index_col=0)
 #state = pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\Longitude_Latitude_State_Table.csv")
 #districts = pd.read_csv("C:\\Users\\silam\\OneDrive\Desktop\\Guvi notes\\phonepe\\Data_Map_Districts_Longitude_Latitude.csv")
