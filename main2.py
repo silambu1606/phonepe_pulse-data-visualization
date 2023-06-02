@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import pandas as pd 
+from streamlit_option_menu import option_menu
 import mysql.connector
 
 conn=mysql.connector.connect(user='root', password='Silambu@1606', host='localhost',port=3306,database='phonepe_pulse',
@@ -16,10 +17,6 @@ cursor=conn.cursor()
 #Top_transaction=pd.read_csv("C:\\Users\\silam\\OneDrive\\Desktop\\Guvi notes\\phonepe\\Top_transaction.csv",index_col=0)
 #Top_user=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\Top_registerd_user.csv",index_col=0)
 
-
-
-
-from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Phonepe Pulse')
 
