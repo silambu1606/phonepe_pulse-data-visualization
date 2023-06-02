@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-
+import plotly.express as px
 import pandas as pd 
 import mysql.connector
 
@@ -18,8 +18,7 @@ cursor=conn.cursor()
 
 
 
-import streamlit as st
-import plotly.express as px
+
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Phonepe Pulse')
