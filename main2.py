@@ -18,7 +18,6 @@ cursor=conn.cursor()
 #Top_user=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\Top_registerd_user.csv",index_col=0)
 
 
-st.set_page_config(page_title='Phonepe Pulse')
 
 # Creating Options in app
 #with st.sidebar:
