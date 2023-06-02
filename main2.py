@@ -17,7 +17,7 @@ cursor=conn.cursor()
 #Top_user=pd.read_csv("C:\\Users\\silam\OneDrive\\Desktop\\Guvi notes\\phonepe\\Top_registerd_user.csv",index_col=0)
 
 
-import numpy as np
+
 import streamlit as st
 import plotly.express as px
 from streamlit_option_menu import option_menu
